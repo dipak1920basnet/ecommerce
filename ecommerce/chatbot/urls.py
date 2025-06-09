@@ -1,7 +1,7 @@
 from django.urls import path
-# from .views import ChatbotView, ChatLogListView  # Placeholder views
-
+from . import views
 urlpatterns = [
-    # path('chat/', ChatbotView.as_view(), name='chat'),
-    # path('chats/', ChatLogListView.as_view(), name='chat-logs'),
+    # path('chat/', views.ChatbotView.as_view(), name='chat'),
+    path('chats/', views.ChatLogListView.as_view(), name='chat-logs'),
+    path('chats/create/', views.ChatLogCreateView.as_view(), name='chat-log-create'),
 ]
